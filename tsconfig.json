@@ -23,6 +23,8 @@
       // console.log(Moment);
       "esModuleInterop": true,
 
+      "baseUrl": ".",
+
       // Если какая-либо библиотека не имеет default exports,
       // лоадеры вроде ts-loader или babel-loader автоматически создают их
       // вместо такого импорта
