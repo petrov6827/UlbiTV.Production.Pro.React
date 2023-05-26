@@ -1,3 +1,3 @@
-import {some} from './fc';
+import {some} from './test';
 
 some(1);
