@@ -16,11 +16,11 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         output: {
           filename: '[name].[contenthash].js',
           path: paths.build,
-          clean: false
+          clean: true
         },
         plugins: buildPlugins(options),
           module: {
-          rules: buildLoaders(),
+          rules: buildLoaders(options),
         },
         resolve: buildResolvers(),
         devtool: isDev ? 'inline-source-map' : undefined,

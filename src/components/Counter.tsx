@@ -1,7 +1,11 @@
 import React from 'react';
-import './counter.scss';
+import s from './Counter.module.scss';
 
 export const Counter = () => {
 
-    return <button>counter</button>
+    return (
+        <div className={s.counter}>
+            <button>counter</button>
+        </div>
+    )
 }
