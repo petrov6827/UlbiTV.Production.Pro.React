@@ -6,12 +6,13 @@ import AboutPageAsync from "./pages/About/AboutPage.async"
 import MainPageAsync from "./pages/MainPage/MainPage.async"
 import { Theme, ThemeContext } from "./styles/Theme/ThemeContext"
 import { useTheme } from './styles/Theme/useTheme';
+import { classNames } from './helpers/classNames';
 
 export const App = () => {
     const {theme, toggleTheme} = useTheme();
 
     return (
-        <div className={`app ${theme}`}>
+        <div className={classNames("app", {}, [theme])}>
             <Link to='/about'>About</Link>
             <Link to='/'>MainPage</Link>
 
