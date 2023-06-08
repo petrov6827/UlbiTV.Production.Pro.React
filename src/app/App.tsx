@@ -1,5 +1,5 @@
 import './styles/index.scss';
-import { Link, Route, Routes } from "react-router-dom"
+// import { Link, Route, Routes } from "react-router-dom";
 import { useTheme } from './providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from './providers/router';
@@ -15,6 +15,7 @@ export const App = () => {
             <div className="content-page">
                 <Sidebar /> 
                 <AppRouter />
+                
             </div>
         </div>
     )

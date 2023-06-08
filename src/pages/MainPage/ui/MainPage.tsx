@@ -4,12 +4,15 @@
 // const MyComponent = () => {
 //     const {t, i18n} = useTranslation();
     
-//     return <div>{t('MAINPAGE')}</div>
+//     return <div>{t('Тест')}</div>
 // }
 
 const MainPage = () => {
     return (
-        <div>MAINPAGE</div>
+        <div>
+            MAINPAGE
+            {/* <MyComponent /> */}
+        </div>
     )
 }
 

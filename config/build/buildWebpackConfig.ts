@@ -3,8 +3,8 @@ import webpack from "webpack";
 import { buildPlugins } from "./buildPlugins";
 import { buildLoaders } from "./buildLoaders";
 import { buildResolvers } from "./buildResolvers";
-import path from "path";
-import HtmlWebpackPlugin from "html-webpack-plugin";
+// import path from "path";
+// import HtmlWebpackPlugin from "html-webpack-plugin";
 import { buildDevServer } from "./buildDevServer";
 
 export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
@@ -19,7 +19,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
           clean: true
         },
         plugins: buildPlugins(options),
-          module: {
+        module: {
           rules: buildLoaders(options),
         },
         resolve: buildResolvers(options),
