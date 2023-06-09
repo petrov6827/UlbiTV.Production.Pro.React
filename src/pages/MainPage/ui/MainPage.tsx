@@ -1,16 +1,26 @@
-// import { Suspense } from "react";
-// import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next"
 
-// const MyComponent = () => {
-//     const {t, i18n} = useTranslation();
+const MyComponent = () => {
+    const {t, i18n} = useTranslation();
+
+    console.log(t);
+
+    const useRus = () => {
+        i18n.changeLanguage('ru')
+    }
+    const useEng = () => {
+        i18n.changeLanguage('en')
+    }
     
-//     return <div>{t('Тест')}</div>
-// }
+    return <div><button onClick={useRus}>RU</button><button onClick={useEng}>EN</button>{t('Перевод')}</div>
+}
 
 const MainPage = () => {
+    const {t, i18n} = useTranslation();
+    
     return (
         <div>
-            MAINPAGE
+            {t('Главная страница')}
             {/* <MyComponent /> */}
         </div>
     )

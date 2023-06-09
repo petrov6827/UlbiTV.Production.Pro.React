@@ -1,8 +1,8 @@
 import { memo, useState } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import { Button } from "shared/ui/Button/Button";
-// import { LangSwitcher } from "shared/ui/LangSwitcher/LangSwitcher";
-import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
+import { ThemeSwitcher } from "widgets/ThemeSwitcher";
+import { LangSwitcher } from "widgets/LangSwitcher/ui/LangSwitcher";
 // import { SidebarItemList } from "../../model/items";
 // import { SidebarItem } from "../SidebarItem/SidebarItem";
 import cls from "./Sidebar.module.scss";
@@ -22,7 +22,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
     <div
       data-testid="sidebar"
       className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
-        className,
+        className
       ])}
     >
       <button onClick={onToggle}>toggle</button>
@@ -48,7 +48,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
       </div> */}
       <div className={cls.switchers}>
         <ThemeSwitcher />
-        {/* <LangSwitcher short={collapsed} className={cls.lang} /> */}
+        <LangSwitcher />
       </div>
     </div>
   );

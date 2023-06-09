@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build:prod": "webpack       --env mode=production",
-    "build:dev": "webpack        --env mode=development",
-    "start": "webpack serve --env port=3000"
+    "build:dev":  "webpack       --env mode=development",
+    "start":      "webpack serve --env port=3000"
   },
   "author": "",
   "license": "ISC",
