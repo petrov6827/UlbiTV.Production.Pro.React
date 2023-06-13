@@ -13,19 +13,20 @@ interface ThemeSwitcherProps {
 }
 
 export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
-  const { theme, toggleTheme } = useTheme();
+    const { theme, toggleTheme } = useTheme();
 
-  return (
-    <Button
-      onClick={toggleTheme}
-      theme={ThemeButton.CLEAR}
-      // square
-      // size={ButtonSize.XL}
-      className={classNames(cls.themeSwitcher, {}, [className])}
-    >
-      {theme === Theme.DARK && <DarkIcon />}
-      {theme === Theme.LIGHT && <LightIcon />}
-      {/* {theme === Theme.GREEN && <GreenIcon/>} */}
-    </Button>
-  );
+    return (
+        <Button
+            
+            onClick={toggleTheme}
+            theme={ThemeButton.CLEAR}
+            // square
+            // size={ButtonSize.XL}
+            className={classNames(cls.themeSwitcher, {}, [className])}
+        >
+            {theme === Theme.DARK && <DarkIcon />}
+            {theme === Theme.LIGHT && <LightIcon />}
+            {/* {theme === Theme.GREEN && <GreenIcon/>} */}
+        </Button>
+    );
 });
