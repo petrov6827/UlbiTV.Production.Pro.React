@@ -1,6 +1,6 @@
 import { memo, useState } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
-import { Button } from "shared/ui/Button/Button";
+// import { Button } from "shared/ui/Button/Button";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 import { LangSwitcher } from "widgets/LangSwitcher/ui/LangSwitcher";
 // import { SidebarItemList } from "../../model/items";
@@ -12,21 +12,21 @@ interface SidebarProps {
 }
 
 export const Sidebar = memo(({ className }: SidebarProps) => {
-  const [collapsed, setCollapsed] = useState(false);
+    const [collapsed, setCollapsed] = useState(false);
 
-  const onToggle = () => {
-    setCollapsed((prev) => !prev);
-  };
+    const onToggle = () => {
+        setCollapsed((prev) => !prev);
+    };
 
-  return (
-    <div
-      data-testid="sidebar"
-      className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
-        className
-      ])}
-    >
-      <button onClick={onToggle}>toggle</button>
-      {/* <Button theme={ButtonTheme.BACKGROUND_INVERTED}
+    return (
+        <div
+            data-testid="sidebar"
+            className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
+                className
+            ])}
+        >
+            <button onClick={onToggle}>toggle</button>
+            {/* <Button theme={ButtonTheme.BACKGROUND_INVERTED}
         className={cls.collapseBtn}
         data-testid="sidebar-toggle"
         size={ButtonSize.L}
@@ -46,10 +46,10 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         }
               
       </div> */}
-      <div className={cls.switchers}>
-        <ThemeSwitcher />
-        <LangSwitcher />
-      </div>
-    </div>
-  );
+            <div className={cls.switchers}>
+                <ThemeSwitcher />
+                <LangSwitcher />
+            </div>
+        </div>
+    );
 });

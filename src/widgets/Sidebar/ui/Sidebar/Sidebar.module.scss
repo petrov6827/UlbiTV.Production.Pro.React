@@ -12,6 +12,9 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .lang {
@@ -35,17 +38,7 @@
 .collapsed {
     width: var(--sidebar-width-collapsed);
 
-    .switchers {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
     .lang {
         margin-left: 0;
     }
-}
-
-.switchers {
-    gap: 10px;
 }

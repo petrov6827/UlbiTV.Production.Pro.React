@@ -20,8 +20,7 @@ module.exports = {
     plugins: ["react", "@typescript-eslint", "i18next", "react-hooks"],
     rules: {
         indent: [1, 4],
-        "react/jsx-filename-extension": [
-            2,
+        "react/jsx-filename-extension": [2, 
             { extensions: [".js", ".jsx", ".tsx"] },
         ],
         "import/no-unresolved": "off",
@@ -43,7 +42,7 @@ module.exports = {
         "no-multiple-empty-lines": ["error", { "max": 1 }],
         // "no-trailing-spaces": ["error", { "skipBlankLines": true }],
         "i18next/no-literal-string": [
-            "warn",
+            "off",
             {
                 markupOnly: true,
                 ignoreAttribute: ["data-testid", "to"],
