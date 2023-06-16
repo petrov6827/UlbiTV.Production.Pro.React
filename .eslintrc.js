@@ -5,10 +5,12 @@ module.exports = {
         jest: true,
         node: true,
     },
-    extends: ["eslint:recommended",
+    extends: [
+        "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:i18next/recommended"],
+        "plugin:i18next/recommended",
+    ],
     parser: "@typescript-eslint/parser",
     parserOptions: {
         ecmaFeatures: {
@@ -17,7 +19,12 @@ module.exports = {
         ecmaVersion: "latest",
         sourceType: "module",
     },
-    plugins: ["react", "@typescript-eslint", "i18next", "react-hooks"],
+    plugins: [
+        "react", 
+        "@typescript-eslint", 
+        "i18next", 
+        "react-hooks"
+    ],
     rules: {
         indent: [1, 4],
         "react/jsx-filename-extension": [2, 
@@ -54,5 +61,10 @@ module.exports = {
         __IS_DEV__: true,
         __API__: true,
         __PROJECT__: true
+    },
+    settings: {
+        react: {
+            version: "detect"
+        }
     },
 }
