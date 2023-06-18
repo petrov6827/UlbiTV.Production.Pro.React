@@ -14,5 +14,10 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
+    "i18n-ally.extract.ignoredByFiles": {
+        "src/pages/NotFoundPage/ui/NotFoundPage.tsx": [
+            "Страница не найдена"
+        ]
+    },
     // "editor.parameterHints.enabled": true,
 }
