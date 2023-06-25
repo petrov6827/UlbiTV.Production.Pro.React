@@ -17,7 +17,10 @@
     "i18n-ally.extract.ignoredByFiles": {
         "src/pages/NotFoundPage/ui/NotFoundPage.tsx": [
             "Страница не найдена"
-        ]
+        ],
     },
+    "i18n-ally.ignoreFiles": [
+        "*.test.{ts,tsx}"
+    ],
     // "editor.parameterHints.enabled": true,
 }

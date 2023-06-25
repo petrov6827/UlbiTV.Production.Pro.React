@@ -1,6 +1,6 @@
 import { memo, useState } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
-// import { Button } from "shared/ui/Button/Button";
+import { Button } from "shared/ui/Button/Button";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 import { LangSwitcher } from "widgets/LangSwitcher/ui/LangSwitcher";
 // import { SidebarItemList } from "../../model/items";
@@ -26,26 +26,28 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
             ])}
         >
             <button onClick={onToggle}>toggle</button>
-            {/* <Button theme={ButtonTheme.BACKGROUND_INVERTED}
-        className={cls.collapseBtn}
-        data-testid="sidebar-toggle"
-        size={ButtonSize.L}
-        square
-        onClick={onToggle}>
-        {collapsed ? ">" : "<"}
-      </Button>
-      <div className={cls.items}>
-                               
-        {SidebarItemList.map((item)=>(
-          <SidebarItem
-            key={item.path}
-            item={item}
-            collapsed={collapsed}
-          />
-        ))
-        }
-              
-      </div> */}
+            <Button 
+                // theme={ButtonTheme.CLEAR}
+                className={cls.collapseBtn}
+                data-testid="sidebar-toggle"
+                // size={ButtonSize.L}
+                // square
+                onClick={onToggle}>
+                {collapsed ? ">" : "<"}
+            </Button>
+
+            {/* <div className={cls.items}>
+                                  
+            {SidebarItemList.map((item)=>(
+              <SidebarItem
+                key={item.path}
+                item={item}
+                collapsed={collapsed}
+              />
+            ))
+            }
+                  
+          </div> */}
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher />
