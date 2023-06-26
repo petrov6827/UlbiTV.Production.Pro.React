@@ -12,31 +12,31 @@ interface SidebarProps {
 }
 
 export const Sidebar = memo(({ className }: SidebarProps) => {
-    const [collapsed, setCollapsed] = useState(false);
+	const [collapsed, setCollapsed] = useState(false);
 
-    const onToggle = () => {
-        setCollapsed((prev) => !prev);
-    };
+	const onToggle = () => {
+		setCollapsed((prev) => !prev);
+	};
 
-    return (
-        <div
-            data-testid="sidebar"
-            className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
-                className
-            ])}
-        >
-            {/* <button onClick={onToggle}>toggle</button> */}
-            <Button 
-                // theme={ButtonTheme.CLEAR}
-                className={cls.collapseBtn}
-                data-testid="sidebar-toggle"
-                // size={ButtonSize.L}
-                // square
-                onClick={onToggle}>
-                {collapsed ? ">" : "<"}
-            </Button>
+	return (
+		<div
+			data-testid="sidebar"
+			className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
+				className
+			])}
+		>
+			{/* <button onClick={onToggle}>toggle</button> */}
+			<Button 
+				// theme={ButtonTheme.CLEAR}
+				className={cls.collapseBtn}
+				data-testid="sidebar-toggle"
+				// size={ButtonSize.L}
+				// square
+				onClick={onToggle}>
+				{collapsed ? ">" : "<"}
+			</Button>
 
-            {/* <div className={cls.items}>
+			{/* <div className={cls.items}>
                                   
             {SidebarItemList.map((item)=>(
               <SidebarItem
@@ -48,10 +48,10 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
             }
                   
           </div> */}
-            <div className={cls.switchers}>
-                <ThemeSwitcher />
-                <LangSwitcher />
-            </div>
-        </div>
-    );
+			<div className={cls.switchers}>
+				<ThemeSwitcher />
+				<LangSwitcher />
+			</div>
+		</div>
+	);
 });

@@ -10,18 +10,18 @@ interface LangSwitcherProps {
 }
 
 export const LangSwitcher:FC<LangSwitcherProps> = () => {
-    const {i18n} = useTranslation();
+	const {i18n} = useTranslation();
 
-    const useRus = () => {
-        i18n.changeLanguage('ru')
-    }
-    const useEng = () => {
-        i18n.changeLanguage('en')
-    }
+	const useRus = () => {
+		i18n.changeLanguage('ru')
+	}
+	const useEng = () => {
+		i18n.changeLanguage('en')
+	}
     
-    // eslint-disable-next-line i18next/no-literal-string
-    return <div>
-        <Button onClick={useRus}>RU</Button>
-        <Button onClick={useEng}>EN</Button>
-    </div>
+	// eslint-disable-next-line i18next/no-literal-string
+	return <div>
+		<Button onClick={useRus}>RU</Button>
+		<Button onClick={useEng}>EN</Button>
+	</div>
 };
