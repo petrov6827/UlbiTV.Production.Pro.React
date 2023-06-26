@@ -25,7 +25,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                 className
             ])}
         >
-            <button onClick={onToggle}>toggle</button>
+            {/* <button onClick={onToggle}>toggle</button> */}
             <Button 
                 // theme={ButtonTheme.CLEAR}
                 className={cls.collapseBtn}
