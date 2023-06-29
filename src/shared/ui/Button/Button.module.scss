@@ -11,8 +11,10 @@
 }
 
 .outline {
-    padding: 1px 6px;
+    // padding: 1px 6px;
+    // background: none;
     border: 1px solid var(--primary-color);
+    border-radius: 2px;
     color: var(--primary-color);
     // font: var(--primary-font);
 }

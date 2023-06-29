@@ -1,14 +1,14 @@
 import type { Preview } from "@storybook/react";
 import {StyleDecorator} from "../../src/shared/config/storybook/decorators/StyleDecorator";
-import {ThemeDecorator} from "../../src/shared/config/storybook/decorators/ThemeDecorator";
+import {ThemeDecorator} from "../../src/shared/config/storybook/decorators/themeDecorator";
 import {Theme} from "../../src/app/providers/ThemeProvider/lib/ThemeContext";
-// import {RouterDecorator} from "../../src/shared/config/storybook/decorators/RouterDecorator";
+import {RouterDecorator} from "../../src/shared/config/storybook/decorators/RouterDecorator";
 
 const preview: Preview = {
 	decorators: [
-		ThemeDecorator(Theme.DARK),
+		ThemeDecorator(Theme.LIGHT),
 		StyleDecorator,
-		// RouterDecorator,
+		RouterDecorator,
 	],
 	parameters: {
 		actions: { argTypesRegex: "^on[A-Z].*" },
