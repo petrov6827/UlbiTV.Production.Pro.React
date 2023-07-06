@@ -6,7 +6,7 @@ on:
     branches: [master]
 jobs:
   pipeline: 
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [17.x]
@@ -20,7 +20,7 @@ jobs:
 
       - name: install modules
         run: npm install
-        
+
       - name: build production project
         run: npm run build:prod
 
