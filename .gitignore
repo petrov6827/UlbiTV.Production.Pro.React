@@ -2,4 +2,3 @@
 /build/
 .idea
 package-lock.json
-/storybook-static/
