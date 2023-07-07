@@ -5,6 +5,10 @@
       4
     ],
     "selector-class-pattern": null,
-    "no-missing-end-of-source-newline": null
+    "no-missing-end-of-source-newline": null,
+    "value-list-comma-newline-after": "never-multi-line",
+    "max-empty-lines": [3, {
+      "message": "Максимум линий пустых допустимо: 3"
+    }]
   }
 }

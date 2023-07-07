@@ -1,18 +1,15 @@
-@import "reset";
+// @import "reset";
 @import "variables/global";
 @import "themes/dark";
 @import "themes/normal";
 
-.app {
+.app,
+.map {
     font: var(--font-m);
     color: var(--primary-color);
     min-height: 100vh;
     background: var(--bg-color);
 }
-
-// a {
-//     color: var(--link-color)
-// }
 
 .content-page {
     display: flex;
