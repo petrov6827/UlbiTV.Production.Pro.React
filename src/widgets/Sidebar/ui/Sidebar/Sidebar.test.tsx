@@ -1,19 +1,16 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { Sidebar } from "./Sidebar";
-import { withTranslation } from "react-i18next";
-import { 
-	renderWithTranslation 
-} from "../../../../shared/lib/tests/renderWithTranslation/renderWithTranslation";
+// import { withTranslation } from "react-i18next";
+import { ComponentRender } from "shared/lib/tests/componentRender/componentRender";
 
 describe('classNames', () => {
-	test('test Btn', () => {
-		const SidebarWithTranslation = withTranslation()(Sidebar);
-		render(<SidebarWithTranslation />);
+	test('with only first param', () => {
+		ComponentRender(<Sidebar />);
 		expect(screen.getByTestId('sidebar')).toBeInTheDocument();
 	})
     
 	test('test toggle', () => {
-		renderWithTranslation(<Sidebar />)
+		ComponentRender(<Sidebar />)
 		const toggleBtn = screen.getByTestId('sidebar-toggle')
 		expect(screen.getByTestId('sidebar')).toBeInTheDocument()
 		fireEvent.click(toggleBtn)
