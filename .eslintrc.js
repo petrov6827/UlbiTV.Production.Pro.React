@@ -25,6 +25,15 @@ module.exports = {
 		"i18next", 
 		"react-hooks"
 	],
+	// "ignorePatterns": ["**.stories.tsx"],
+	overrides: [
+		{
+			files: ["**.stories.tsx"],
+			rules: {
+				'max-len': 'off'
+			}
+		}
+	],
 	rules: {
 		indent: ['error', 'tab'],
 		"no-tabs": 0,
@@ -46,8 +55,8 @@ module.exports = {
 		"import/extensions": "off",
 		"import/no-extraneous-dependencies": "off",
 		"no-underscore-dangle": "off",
-		"react-hooks/rules-of-hooks": "error",
-		"react-hooks/exhaustive-deps": "warn",
+		"react-hooks/rules-of-hooks": "error", //правила хуков
+		"react-hooks/exhaustive-deps": "error", // зависимости эффектов
 		"no-multiple-empty-lines": ["error", { "max": 1 }],
 		// "no-trailing-spaces": ["error", { "skipBlankLines": true }],
 		"i18next/no-literal-string": [
@@ -78,4 +87,5 @@ module.exports = {
 			version: "detect"
 		}
 	},
+	
 }

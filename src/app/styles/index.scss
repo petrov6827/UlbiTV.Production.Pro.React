@@ -3,12 +3,15 @@
 @import "themes/dark";
 @import "themes/normal";
 
-.app,
-.map {
+body {
     font: var(--font-m);
     color: var(--primary-color);
-    min-height: 100vh;
+}
+
+.app,
+.map {
     background: var(--bg-color);
+    min-height: 100vh;
 }
 
 .content-page {

@@ -13,7 +13,8 @@
     justify-content: center;
     width: 100%;
     flex-direction: column;
-    align-items: center;
+
+    // align-items: center;
     gap: 10px;
 }
 
@@ -70,4 +71,8 @@
 .icon {
     margin-right: 10px;
     fill: var(--inverted-primary-color);
+}
+
+.button .icon {
+    padding: 0;
 }
