@@ -1,17 +1,24 @@
+import { useDispatch } from "react-redux"
 import { Button } from "shared/ui/Button/Button"
+import { counterActions } from "../model/slice/CounterSlice";
 
 export const Counter = () => {
+	const dispatch = useDispatch();
 
-	const increm = () => {}
-	const decrem = () => {}
+	const increment = () => {
+		dispatch(counterActions.increment())
+	}
+	const decrement = () => {
+		dispatch(counterActions.decrement())
+	}
 
 	return (
 		<div>
-			<h1>value</h1>
-			<Button onClick={increm}>
+			<h1>value = {counter}</h1>
+			<Button onClick={increment}>
             in
 			</Button>
-			<Button onClick={decrem}>
+			<Button onClick={decrement}>
             de
 			</Button>
 		</div>

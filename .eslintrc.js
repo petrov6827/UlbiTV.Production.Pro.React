@@ -68,6 +68,7 @@ module.exports = {
 		],
 		"max-len": ["error", { ignoreComments: true, code: 110 }],
 		"arrow-body-style": ["error", "as-needed"],
+		"no-param-reassign": "off",
 		//определяет, является ли импортируемый модуль типом или нет, 
 		"@typescript-eslint/consistent-type-imports": [
 			"error",
