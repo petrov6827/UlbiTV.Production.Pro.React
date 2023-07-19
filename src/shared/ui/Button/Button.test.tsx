@@ -11,12 +11,12 @@ describe('classNames', () => {
 	test('test Btn', () => {
 		render(<Button theme={ButtonTheme.CLEAR}>test Btn</Button>);
 		expect(screen.getByText('test Btn')).toHaveClass('clear');
-		screen.debug()
+		// screen.debug()
 	})
 
 	test('test Btn', () => {
 		render(<Button theme={ButtonTheme.OUTLINE}>test Btn</Button>);
 		expect(screen.getByText('test Btn')).toHaveClass('outline');
-		screen.debug()
+		// screen.debug()
 	})
 })

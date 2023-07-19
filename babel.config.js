@@ -4,8 +4,14 @@ module.exports = {
         
 		//в доке jestjs.io вкладка typescript
 		'@babel/preset-typescript',
-		['@babel/preset-react', {
-			'runtime': 'automatic'
-		}]
+		//storybook 7.0.4 migrations		
+		// {
+		// 	"onlyRemoveTypeImports": true,
+		// 	"allExtensions": true,
+		// 	"isTSX": true
+		// },
+		[
+			'@babel/preset-react', {'runtime': 'automatic'}
+		]
 	],
 };
