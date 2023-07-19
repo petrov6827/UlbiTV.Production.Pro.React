@@ -3,13 +3,14 @@
 @import "themes/dark";
 @import "themes/normal";
 
+// .map,
+// .app_modal { 
 body {
     font: var(--font-m);
     color: var(--primary-color);
 }
 
-.app,
-.map {
+.app {
     background: var(--bg-color);
     min-height: 100vh;
 }

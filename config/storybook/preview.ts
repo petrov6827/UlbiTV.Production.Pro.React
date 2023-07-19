@@ -1,5 +1,5 @@
-import type { Preview } from "@storybook/react";
-// import type { Preview } from "@storybook/react-webpack5";
+// import type { Preview } from "@storybook/react";
+import type { Preview } from "@storybook/react-webpack5";
 import {StyleDecorator} from "../../src/shared/config/storybook/decorators/StyleDecorator";
 import {ThemeDecorator} from "../../src/shared/config/storybook/decorators/themeDecorator";
 import {Theme} from "../../src/app/providers/ThemeProvider/lib/ThemeContext";
