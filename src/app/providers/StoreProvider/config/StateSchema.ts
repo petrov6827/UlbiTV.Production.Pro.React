@@ -2,10 +2,12 @@
 //     value: number
 // }
 
+import type { CounterSchema } from "entities/Counter/model/types/counterSchema";
+
 // export interface StateSchema {
 //     counter: CounterState,
 // }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface StateSchema {
+    counter: CounterSchema
 }
