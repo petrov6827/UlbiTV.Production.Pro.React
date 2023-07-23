@@ -11,7 +11,8 @@ interface ModalProps {
     className?: string;
     children?: ReactNode,
     isOpen?: boolean,
-    onClose?: () => void
+    onClose?: () => void,
+	lazy?: boolean
 }
 
 const ANIMATION_DELAY = 300
@@ -21,10 +22,12 @@ export const Modal: FC<ModalProps> = (props) => {
 		className, 
 		children, 
 		isOpen,
-		onClose 
+		onClose, 
+		lazy
 	} = props;
 
 	const [isClosing, setIsClosing] = useState(false)
+	const [isMounted, setIsMounted] = useState(false)
 	const timerRef = useRef<ReturnType<typeof setTimeout>>()
 
 	const closeHandler = useCallback(() => {
@@ -64,6 +67,18 @@ export const Modal: FC<ModalProps> = (props) => {
 		[cls.isClosing]: isClosing
 	}
 
+	//если есть флаг изОпен то меняем состояние измаунтед.
+	useEffect(()=> {
+		if (isOpen) {
+			setIsMounted(true)
+		}
+	}, [isOpen])
+	
+	//монтирование модалки при открытии, если есть lazy и не смонтирована модалка то возращаем null
+	if (lazy && !isMounted) {
+		return null
+	}
+
 	return (
 		<Portal>
 			<div className={classNames(cls.modal, mods, [className, 'app_modal'])}>
@@ -71,7 +86,8 @@ export const Modal: FC<ModalProps> = (props) => {
 					<div 
 						className={cls.content}
 						onClick={onContentClick}>
-					Lorem, ipsum dolor sit {children}x temporibus error delectus excepturi.
+						{/* Lorem, ipsum dolor sit {children}x temporibus error delectus excepturi. */}
+						{children}
 					</div>
 				</div>
 			</div>

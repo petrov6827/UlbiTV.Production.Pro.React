@@ -22,7 +22,7 @@
 .content {
     padding: 20px;
     border-radius: 12px;
-    background: bisque;
+    background: var(--modal-color);
     transition: transform 0.3s;
     transform: scale(0.5);
     max-width: 60%;

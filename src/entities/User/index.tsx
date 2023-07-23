@@ -1,3 +1,2 @@
-import { User } from "./ui/User";
-
-export {User}
+export {userReducer, userActions} from './model/slice/userSlice'
+export {User, UserSchema} from './model/types/user'
