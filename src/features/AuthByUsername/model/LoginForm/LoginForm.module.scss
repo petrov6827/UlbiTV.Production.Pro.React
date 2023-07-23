@@ -1,6 +1,12 @@
 .loginForm {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    min-width: max-content;
+    width: 300px;
+    border: 1px solid grey;
+    padding: 10px;
+    padding-bottom: 20px;
 }
 
 .input {
@@ -9,5 +15,6 @@
 
 .loginBtn {
     margin-top: 15px;
-    margin-left: auto;
+    // margin-left: auto;
+    width: auto;
 }
