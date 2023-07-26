@@ -1,2 +1,2 @@
-export {LoginModal} from "./model/LoginModal/LoginModal";
+export { LoginModal } from "./ui/LoginModal/LoginModal";
 
