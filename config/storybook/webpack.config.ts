@@ -12,6 +12,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
 		html: "",
 		src: path.resolve(__dirname, "..", "..", "src"),
 	};
+
 	config.resolve?.modules?.push(paths.src);
 	config.resolve?.extensions?.push("ts", "tsx");
 
@@ -35,5 +36,6 @@ export default ({ config }: { config: webpack.Configuration }) => {
 		__API__:JSON.stringify(''),
 		__PROJECT__: JSON.stringify("storybook"),
 	}))
+
 	return config;
 };

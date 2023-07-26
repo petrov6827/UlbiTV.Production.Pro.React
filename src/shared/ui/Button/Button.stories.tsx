@@ -94,6 +94,15 @@ export const SquareSizeXL:Story = {
 // 	theme: ButtonTheme.OUTLINE,
 // 	size: ButtonSize.XL
 // };
+
+export const Disabled:Story = {
+	args: {
+		children: 'Button',
+		theme: ButtonTheme.OUTLINE,
+		disabled: true
+	}
+}
+
 // export const Disabled = Template.bind({});
 // Disabled.args = {
 // 	children: "Text",
