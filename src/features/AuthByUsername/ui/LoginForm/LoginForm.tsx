@@ -33,6 +33,8 @@ export const LoginForm = memo(({className} : LoginFormProps) => {
 		dispatch(loginByUsername({username,password}))
 	}, [dispatch, password, username])
 
+	console.log('error ->>' + error)
+
 	return (
 		<div className={classNames(cls.loginForm, {}, [className])}>
 			<Text text={t('Форма авторизации')} />

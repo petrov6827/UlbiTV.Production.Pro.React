@@ -13,9 +13,10 @@ interface LoginByUsernameProps {
 
 export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps>(
 	'login/loginByUsername',
-	async (authData, thunkAPI) => {
+	async ({username, password}, thunkAPI) => {
+		const {extra, dispatch, rejectWithValue} = thunkAPI
 		try {
-			const response = await axios.post<User>('http://localhost:8000/login', authData);
+			const response = await axios.post<User>('http://localhost:8000/login', {username, password});
 			
 			if(!response.data) {
 				throw new Error();
@@ -24,11 +25,10 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps>(
 			//парсим из js в строку
 			localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data))
 			thunkAPI.dispatch(userActions.setAuthData)
-
-			console.log(response.data);
+			dispatch(userActions.setAuthData(response.data))
+			
 			return response.data;
 		} catch (e) {
-			console.log(e);
 			return thunkAPI.rejectWithValue(i18n.t('Вы ввели неправильный логин или пароль', {ns: 'auth'}))
 		}
 	}
