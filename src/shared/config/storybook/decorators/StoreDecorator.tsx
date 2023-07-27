@@ -4,10 +4,7 @@ import type { StateSchema} from "app/providers/StoreProvider";
 import { StoreProvider } from "app/providers/StoreProvider";
 
 export const StoreDecorator = (state:DeepPartial<StateSchema>) => (StoryComponent: Story) => (
-	<StoreProvider
-		initialState={state}
-		// asyncReducers={{...defaultAsyncReducers, ...asyncReducers}}
-	>
+	<StoreProvider initialState={state}>
 		<StoryComponent/>
 	</StoreProvider>
 );
