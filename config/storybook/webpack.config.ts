@@ -13,7 +13,8 @@ export default ({ config }: { config: webpack.Configuration }) => {
 		src: path.resolve(__dirname, "..", "..", "src"),
 	};
 
-	config.resolve?.modules?.push(paths.src);
+	// config.resolve?.modules?.push(paths.src);
+	config.resolve?.modules?.push(path.relative(__dirname, '../../src'), 'node_modules')
 	config.resolve?.extensions?.push("ts", "tsx");
 
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
