@@ -1,4 +1,4 @@
-import { useCallback, memo, useState } from 'react';
+import { useCallback, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';

@@ -14,7 +14,8 @@ interface LoginByUsernameProps {
 export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps>(
 	'login/loginByUsername',
 	async ({username, password}, thunkAPI) => {
-		const {extra, dispatch, rejectWithValue} = thunkAPI
+		// const {extra, dispatch, rejectWithValue} = thunkAPI
+		const {dispatch, rejectWithValue} = thunkAPI
 		try {
 			const response = await axios.post<User>('http://localhost:8000/login', {username, password});
 			
@@ -29,7 +30,7 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps>(
 			
 			return response.data;
 		} catch (e) {
-			return thunkAPI.rejectWithValue(i18n.t('Вы ввели неправильный логин или пароль', {ns: 'auth'}))
+			return rejectWithValue(i18n.t('Вы ввели неправильный логин или пароль', {ns: 'auth'}))
 		}
 	}
 )
