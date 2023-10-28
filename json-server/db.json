@@ -19,6 +19,12 @@
       "id": 4,
       "title": "json-server4",
       "author": "typicode"
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
     }
   ],
   "comments": [
@@ -33,6 +39,12 @@
       "id": 1,
       "username": "admin",
       "password": "123"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
     }
   ],
   "profile": {

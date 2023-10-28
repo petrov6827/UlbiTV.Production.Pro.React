@@ -10,16 +10,17 @@ import { getLoginState } from '../../model/selectors/getLoginState/getLoginState
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 
-interface LoginFormProps {
+export interface LoginFormProps {
     className?: string;
 }
 
-export const LoginForm = memo(({className} : LoginFormProps) => {
+const LoginForm = memo(({className} : LoginFormProps) => {
 	const {t} = useTranslation();
 	const dispatch = useDispatch();
 	
 	// const loginForm = useSelector(getLoginState);
 	const {username, password, error, isLoading} = useSelector(getLoginState);
+	console.log(username)
 
 	const onChangeUsername = useCallback((value:string) => {
 		dispatch(loginActions.setUsername(value))
@@ -32,8 +33,6 @@ export const LoginForm = memo(({className} : LoginFormProps) => {
 	const onLoginClick = useCallback(() => {
 		dispatch(loginByUsername({username,password}))
 	}, [dispatch, password, username])
-
-	console.log('error ->>' + error)
 
 	return (
 		<div className={classNames(cls.loginForm, {}, [className])}>
@@ -66,3 +65,5 @@ export const LoginForm = memo(({className} : LoginFormProps) => {
 		</div>
 	)
 })
+
+export default LoginForm;

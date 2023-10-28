@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/decorators/StoreDecorator';
-import { LoginForm } from './LoginForm';
+import LoginFormAsync from './LoginForm.async';
 
-const meta: Meta<typeof LoginForm> = {
-	component: LoginForm,
+const meta: Meta<typeof LoginFormAsync> = {
+	component: LoginFormAsync,
 };
 
 export default meta;
-type Story = StoryObj<typeof LoginForm>;
+type Story = StoryObj<typeof LoginFormAsync>;
 
 export const Primary: Story = {args: {}};
 Primary.decorators = [StoreDecorator({

@@ -1,7 +1,8 @@
 import type { FC } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Modal } from 'shared/ui/Modal/Modal';
-import { LoginForm } from '../LoginForm/LoginForm';
+// import { LoginForm } from '../LoginForm/LoginForm';
+import LoginFormAsync from '../LoginForm/LoginForm.async';
 import cls from './LoginModal.module.scss';
 
 interface LoginModalProps {
@@ -19,7 +20,7 @@ export const LoginModal: FC<LoginModalProps> = (props) => {
 			onClose={onClose}
 			lazy
 		>
-			<LoginForm />
+			<LoginFormAsync />
 		</Modal>
 	)
 }

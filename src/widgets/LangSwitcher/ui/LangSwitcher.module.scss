@@ -1,3 +1,43 @@
 .langswitcher {
     display: flex;
 }
+
+.mobile {
+    &.qa_form__wrapper {
+        padding: 0;
+        height: calc(100vh - 10vh);
+    }
+
+    .qa_title {
+        font-size: 1.5rem;
+        padding: 10px 10px 0;
+    }
+
+    .qa_form {
+        margin: 10px -20px;
+        top: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rc-dialog-body .mobile {
+        padding: 0;
+        height: 100vh;
+    }
+
+    .qa_form__title {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .qa_form .input-group {
+        font-size: 0.15rem;
+    }
+
+    .qa_form .input-group label {
+        font-size: 0.6rem;
+    }
+
+    .qa_form .error-message { font-size: 0.6rem; }
+}
